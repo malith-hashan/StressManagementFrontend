@@ -1,0 +1,28 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Quections list</div>
+  <div class="page__content shadow p-3 position-relative" id="main-container">
+    <table class="table table-secondary table-striped">
+      <thead>
+      <tr>
+        <th scope="col">quection id</th>
+        <th scope="col">quection number</th>
+        <th scope="col">quection name</th>
+        <th scope="col">date of release</th>
+        <th scope="col">answers</th>
+
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let quection of quections">
+        <td>{{ quection.id}}</td>
+        <td>{{ quection.quectionNo }}</td>
+        <td>{{ quection.quectionName }}</td>
+        <td>{{ quection.date }}</td>
+        <td>{{ quection.answers|json }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
