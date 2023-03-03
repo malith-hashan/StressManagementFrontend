@@ -1,0 +1,30 @@
+<form #addForm="ngForm" (ngSubmit)="addQuection(addForm)">
+  <div class="form-group">
+    <label>Quection No</label>
+    <input
+      type="text"
+      class="form-control"
+      id="quectionNoe"
+      ngModel
+      name="quectionNo"
+    />
+  </div>
+
+  <div class="form-group">
+    <label>quection Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="quectionName"
+      ngModel
+      name="quectionName"
+    />
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary" >
+      Save Course
+    </button>
+  </div>
+
+
+</form>

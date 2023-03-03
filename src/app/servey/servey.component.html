@@ -1,1 +1,55 @@
 <p>servey works!</p>
+<form #addForm="ngForm" (ngSubmit)="createServey(addForm)">
+  <div class="form-group" *ngFor="let quection of quections">
+
+    <label >
+      {{quection.quectionName}}</label>
+
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1">Option 1</mat-radio-button>
+      <mat-radio-button value="2">Option 2</mat-radio-button>
+      <mat-radio-button value="3">Option 3</mat-radio-button>
+      <mat-radio-button value="4">Option 4</mat-radio-button>
+      <mat-radio-button value="5">Option 5</mat-radio-button>
+    </mat-radio-group>
+
+  </div>
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--    <mat-radio-group aria-label="Select an option">-->
+<!--    <mat-radio-button value="1">Option 1</mat-radio-button>-->
+<!--    <mat-radio-button value="2">Option 2</mat-radio-button>-->
+<!--    <mat-radio-button value="3">Option 3</mat-radio-button>-->
+<!--    <mat-radio-button value="4">Option 4</mat-radio-button>-->
+<!--    <mat-radio-button value="5">Option 5</mat-radio-button>-->
+<!--  </mat-radio-group>-->

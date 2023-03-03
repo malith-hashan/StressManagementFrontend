@@ -1,13 +1,13 @@
-export interface Answer {
-  answerNo: number;
-  answerText: string;
-  weight: number;
-}
+// export interface Answer {
+//   answerNo: number;
+//   answerText: string;
+//   weight: number;
+// }
 
 export interface IQuection {
   id: string;
-  quectionNo: string;
+  quectionNo: number;
   quectionName: string;
   date: string;
-  answers: Answer[];
+  // answers: Answer[];
 }

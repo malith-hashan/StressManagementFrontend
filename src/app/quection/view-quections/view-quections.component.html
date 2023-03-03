@@ -1,5 +1,5 @@
 <div class="container-fluid page">
-  <div class="d-flex page__box p-3 mt-2">Quections list</div>
+  <div class="d-flex page__box p-3 mt-2"><h1 class="display-4">Quection List</h1></div>
   <div class="page__content shadow p-3 position-relative" id="main-container">
     <table class="table table-secondary table-striped">
       <thead>
@@ -8,8 +8,8 @@
         <th scope="col">quection number</th>
         <th scope="col">quection name</th>
         <th scope="col">date of release</th>
-        <th scope="col">answers</th>
-
+        <th class="text-center" scope="col">Edit</th>
+        <th class="text-center" scope="col">Delete</th>
 
       </tr>
       </thead>
@@ -19,10 +19,24 @@
         <td>{{ quection.quectionNo }}</td>
         <td>{{ quection.quectionName }}</td>
         <td>{{ quection.date }}</td>
-        <td>{{ quection.answers|json }}</td>
+
+        <td class="text-center">
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="DeleteQuection(quection.id)"
+          >
+            Delete
+          </button>
+        </td>
+
       </tr>
       </tbody>
+
+
     </table>
+    <button class="btn btn-warning" (click)="openDialog()" >add quections!</button>
+
   </div>
 </div>
 
