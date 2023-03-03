@@ -25,6 +25,9 @@ import { AddQuectionComponent } from './dialogBox/add-quection/add-quection.comp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatTableModule} from '@angular/material/table';
+import { ViewAllserveysComponent } from './adminServey/view-allserveys/view-allserveys.component';
+import { AdminServeyHomeComponent } from './adminServey/admin-servey-home/admin-servey-home.component';
+import { UserServerViewComponent } from './user-server-view/user-server-view.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import {MatTableModule} from '@angular/material/table';
     HeaderComponent,
     FooterComponent,
     AddQuectionComponent,
+    ViewAllserveysComponent,
+    AdminServeyHomeComponent,
+    UserServerViewComponent,
     //QuectionComponent,
    // QuectionServiceComponent
   ],

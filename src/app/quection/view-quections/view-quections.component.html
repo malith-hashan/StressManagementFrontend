@@ -4,21 +4,18 @@
     <table class="table table-secondary table-striped">
       <thead>
       <tr>
-        <th scope="col">quection id</th>
         <th scope="col">quection number</th>
         <th scope="col">quection name</th>
         <th scope="col">date of release</th>
-        <th class="text-center" scope="col">Edit</th>
         <th class="text-center" scope="col">Delete</th>
 
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let quection of quections">
-        <td>{{ quection.id}}</td>
-        <td>{{ quection.quectionNo }}</td>
+        <td>{{ quection.quectionNo}}</td>
         <td>{{ quection.quectionName }}</td>
-        <td>{{ quection.date }}</td>
+        <td>{{ quection.date|date }}</td>
 
         <td class="text-center">
           <button

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ServeyServiceService} from "../service/servey-service.service";
 import {NgForm} from "@angular/forms";
 import {IQuection} from "../modules/quectionModle/quectionModle";
-import {ServeyModle} from "../modules/quectionModle/serveyModle";
+import {ServeyModle} from "../modules/serveyModle/serveyModle";
 import {QuectionServiceService} from "../service/quection-service/quection-service.service";
 
 
@@ -27,7 +27,7 @@ ngOnInit() {
 }
 
   public createServey(addForm:NgForm):void{
-  this.serveyService.createServey1(addForm.value).subscribe(
+  this.serveyService.createServey(addForm.value).subscribe(
     (responce:ServeyModle) => {
       this.serveyService.getAllServeys();
       addForm.reset();

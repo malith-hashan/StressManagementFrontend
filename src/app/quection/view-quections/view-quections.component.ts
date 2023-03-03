@@ -28,6 +28,7 @@ export class ViewQuectionsComponent implements OnInit{
     this.quectionService.getAllQuection().subscribe(
       (responce :IQuection[])=>{
         this.quections =responce;
+        console.log(responce)
       },
     (error:HttpErrorResponse)=>{
       alert(error.message)

@@ -1,0 +1,42 @@
+<p>view-allserveys works!</p>
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2"><h1 class="display-4">Quection List</h1></div>
+  <div class="page__content shadow p-3 position-relative" id="main-container">
+    <table class="table table-secondary table-striped">
+      <thead>
+      <tr>
+        <th scope="col">user id</th>
+        <th scope="col">userResult name</th>
+        <th scope="col">date</th>
+        <th scope="col">userAnsewed quections</th>
+
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let servey1 of servey">
+        <td>{{ servey1.userid}}</td>
+        <td>{{ servey1.userResult }}</td>
+        <td>{{ servey1.date| date }}</td>
+        <td>{{ servey1.userAnswerdQuection |json}}</td>
+
+<!--        <td class="text-center">-->
+<!--          <button-->
+<!--            type="button"-->
+<!--            class="btn btn-danger"-->
+<!--            (click)="DeleteQuection(quection.id)"-->
+<!--          >-->
+<!--            Delete-->
+<!--          </button>-->
+<!--        </td>-->
+
+      </tr>
+      </tbody>
+
+
+    </table>
+<!--    <button class="btn btn-warning" (click)="openDialog()" >add quections!</button>-->
+
+  </div>
+</div>
+

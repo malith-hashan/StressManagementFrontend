@@ -7,16 +7,17 @@ export interface AnswerArray{
 
 export interface ServeyModle{
 id:string;
-userId:string;
-  userAnswerdQuection:number[];
-  userResult: EResult;
+userid:number;
+userAnswerdQuection:AnswerArray[];
+date:string;
+userResult: EResult;
 }
 
 enum EResult{
-  HIGH_STRESS=0,
-  MEDIUM_STRESS=1,
-  LOW_STRESS=2,
-  NORMAL=3,
+  HIGH_STRESS,
+  MEDIUM_STRESS,
+  LOW_STRESS,
+  NORMAL
 
 }
 

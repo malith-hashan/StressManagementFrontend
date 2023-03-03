@@ -1,0 +1,46 @@
+<p>user-server-view works!</p>
+<form #userForm="ngForm">
+  <label>enter user id</label>
+  <input  [(ngModel)]="id" type="number"  name="userId" id="userId" >
+  <button type="button" name="submitButton" id="submitButton" (click)="onSubmit()" >find</button>
+</form>
+
+
+
+<!--<div-->
+<!--  class="d-flex justify-content-md-center align-items-center vh-100"-->
+<!--  id="main"-->
+<!--&gt;-->
+<!--  <div class="container-sm w-25">-->
+<!--    <form (ngSubmit)="onSubmit()">-->
+<!--      <div class="form-group">-->
+<!--        <label>Course Code</label>-->
+<!--        <input-->
+<!--          type="text"-->
+<!--          class="form-control"-->
+<!--          id="courseCode"-->
+<!--          [(ngModel)]="id"-->
+<!--          name="courseCode"-->
+<!--        />-->
+<!--      </div>-->
+
+<!--     -->
+
+<!--&lt;!&ndash;      <div class="form-group">&ndash;&gt;-->
+<!--&lt;!&ndash;        <label>Description</label>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input&ndash;&gt;-->
+<!--&lt;!&ndash;          type="text"&ndash;&gt;-->
+<!--&lt;!&ndash;          class="form-control"&ndash;&gt;-->
+<!--&lt;!&ndash;          id="description"&ndash;&gt;-->
+<!--&lt;!&ndash;          [(ngModel)]="course.description"&ndash;&gt;-->
+<!--&lt;!&ndash;          name="description"&ndash;&gt;-->
+<!--&lt;!&ndash;        />&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <div class="modal-footer">&ndash;&gt;-->
+<!--&lt;!&ndash;        <button class="btn btn-secondary" (click)="onBackClick()">Back</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        <button type="submit" class="btn btn-primary">Save Course</button>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
