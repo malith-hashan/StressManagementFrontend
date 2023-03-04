@@ -19,7 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import {MatRadioModule} from '@angular/material/radio';
 //import { QuectionComponent } from './modules/quectionModle/quection.component';
 //import { QuectionServiceComponent } from './service/quection-service/quection-service.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { AddQuectionComponent } from './dialogBox/add-quection/add-quection.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,6 +30,10 @@ import { AdminServeyHomeComponent } from './adminServey/admin-servey-home/admin-
 import { UserServerViewComponent } from './user-server-view/user-server-view.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { AdminComponent } from './admin/admin.component';
+import { AuthComponent } from './auth/auth.component';
+import {UserService} from "./service/user.service";
+import {AuthGuard} from "./auth/auth.guard";
+import {AuthInterceptor} from "./auth/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -51,6 +55,7 @@ import { AdminComponent } from './admin/admin.component';
     UserServerViewComponent,
     ForbiddenComponent,
     AdminComponent,
+    AuthComponent,
     //QuectionComponent,
    // QuectionServiceComponent
   ],
@@ -67,7 +72,15 @@ import { AdminComponent } from './admin/admin.component';
     MatDialogModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+    UserService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
