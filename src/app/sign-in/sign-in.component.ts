@@ -29,8 +29,9 @@ export class SignInComponent {
         const role=responce.roles[0];
         if(role=== 'ROLE_ADMIN'){
           this.router.navigate(['/admin'])
+        }else(role==='ROLE_USER')
+          this.router.navigate(['/userTrack'])
 
-        }
       },
       (error) => {
         console.log(error);

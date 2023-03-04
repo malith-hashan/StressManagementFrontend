@@ -9,6 +9,7 @@ import {UserServerViewComponent} from "./user-server-view/user-server-view.compo
 import {SignInComponent} from "./sign-in/sign-in.component";
 import {ForbiddenComponent} from "./forbidden/forbidden.component";
 import {AdminComponent} from "./admin/admin.component";
+import {UserTrackComponent} from "./user-track/user-track.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -19,6 +20,8 @@ const routes: Routes = [
   {path: 'UserServeyView', component: UserServerViewComponent},
   {path: 'SignIn', component: SignInComponent},
   {path: 'Forbidden', component: ForbiddenComponent},
+  {path: 'userTrack', component: UserTrackComponent},
+
 
   {path: 'admin', component: AdminComponent}
 
