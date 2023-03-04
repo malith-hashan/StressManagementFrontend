@@ -8,10 +8,12 @@
         <li class="nav-item"><a class="nav-link" routerLink="Quections">Quection</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="Servey">Servey</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="AdminServeyView">AdminServeyView</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="UserServeyView">UserServeyView</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="UserServeyView" >UserServeyView</a></li>
+
+        <li class="nav-item"><a class="nav-link" routerLink="admin">admin</a></li>
       </ul>
-      <button type="button" class="btn-success" routerLink="SignIn">SignIn</button>
-      <button type="button" class="btn-success" routerLink="SignIn">LogOUT</button>
+      <button *ngIf="!isLogedin()" type="button" class="btn-success" routerLink="SignIn">SignIn</button>
+      <button *ngIf="isLogedin()" type="button" class="btn-success" routerLink="SignIn" (click)="isLogout()">LogOUT</button>
 
     </div>
 

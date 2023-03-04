@@ -29,6 +29,7 @@ import { ViewAllserveysComponent } from './adminServey/view-allserveys/view-alls
 import { AdminServeyHomeComponent } from './adminServey/admin-servey-home/admin-servey-home.component';
 import { UserServerViewComponent } from './user-server-view/user-server-view.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     AdminServeyHomeComponent,
     UserServerViewComponent,
     ForbiddenComponent,
+    AdminComponent,
     //QuectionComponent,
    // QuectionServiceComponent
   ],

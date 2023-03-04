@@ -8,9 +8,10 @@ import {ViewAllserveysComponent} from "./adminServey/view-allserveys/view-allser
 import {UserServerViewComponent} from "./user-server-view/user-server-view.component";
 import {SignInComponent} from "./sign-in/sign-in.component";
 import {ForbiddenComponent} from "./forbidden/forbidden.component";
+import {AdminComponent} from "./admin/admin.component";
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'Quections', component: ViewQuectionsComponent},
   {path: 'Servey', component: ServeyComponent},
   {path: 'EditQuection/:id', component: EditQuectionsComponent},
@@ -18,6 +19,8 @@ const routes: Routes = [
   {path: 'UserServeyView', component: UserServerViewComponent},
   {path: 'SignIn', component: SignInComponent},
   {path: 'Forbidden', component: ForbiddenComponent},
+
+  {path: 'admin', component: AdminComponent}
 
 
 ];
