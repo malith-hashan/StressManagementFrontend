@@ -18,7 +18,7 @@ export class ViewAllserveysComponent implements OnInit{
 
 
 
-  public getAllServeyDetails():void{
+  public getAllServeyDetails(){
     this.serveyService.getAllServeys().subscribe(
       (responce :ServeyModle[])=>{
         console.log("check!!!")

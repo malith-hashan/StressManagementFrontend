@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {IQuection} from "../modules/quectionModle/quectionModle";
 import {ServeyModle} from "../modules/serveyModle/serveyModle";
+import {ServeyCreateModle} from "../modules/serveyModle/ServeyCreateModle";
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +17,11 @@ export class ServeyServiceService {
     return this.http.get<ServeyModle[]>('http://localhost:8080/api/servey/');
   }
 
-  public createServey(servey:ServeyModle):Observable<ServeyModle>{
+  public createServey(servey:ServeyCreateModle):Observable<ServeyCreateModle>{
+    console.log("servey work")
     console.log(servey);
-    return this.http.post<ServeyModle>(
-      'http://localhost:8080/api/servey/',servey
+    return this.http.post<ServeyCreateModle>(
+      'http://localhost:8080/api/servey/1',servey
     )
   }
 public getServeyByUserId(id:number):Observable<ServeyModle[]>{

@@ -16,9 +16,9 @@ export class UserService {
   ) { }
 
   public login(loginData:NgForm){
+    console.log(loginData)
     return this.httpclient.post(this.PATH_OF_API + "/signin",loginData,{headers:this.requestHeader})
   }
-
 
 
 
@@ -40,43 +40,5 @@ export class UserService {
     }
   }
 
-
-
-
-  // public roleMatch(allowedRoles:[string]) {
-  //   let isMatch:boolean = false;
-  //   const userRoles: any = this.userAuthService.getRoles();
-  //
-  //   if (userRoles != null && userRoles) {
-  //     for (let i = 0; i < userRoles.length; i++) {
-  //       for (let j = 0; j < allowedRoles.length; j++) {
-  //         if (userRoles[i].roleName === allowedRoles[j]) {
-  //           isMatch = true;
-  //           return isMatch;
-  //         } else {
-  //           return isMatch;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-
-  // public roleMatch(allowedRoles:string | any[]): boolean {
-  //   let isMatch = false;
-  //   const userRoles: any = this.userAuthService.getRoles();
-  //
-  //   if (userRoles != null && userRoles) {
-  //     for (let i = 1; i < userRoles.length; i++) {
-  //       for (let j = 1; j < allowedRoles.length; j++) {
-  //         if (userRoles[i].roles == allowedRoles) {
-  //           return isMatch;
-  //         } else {
-  //           return isMatch;
-  //         }
-  //       }
-  //     }
-  //   }
-  //   return isMatch;
-  // }
 
 }

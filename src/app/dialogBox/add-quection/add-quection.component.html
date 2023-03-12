@@ -1,30 +1,75 @@
+<div class="page__content shadow p-3 position-relative" id="main-container">
+<div class="nav-header">
+
+
+  <header class="text-center text-white py-3 bg-dark" >
+
+    <h1 class="display-5 font-weight-bold mb-4"><u>add quection</u></h1>
+
+
+  </header>    </div>
+
+
+
 <form #addForm="ngForm" (ngSubmit)="addQuection(addForm)">
+
   <div class="form-group">
-    <label>Quection No</label>
+    <label class="h6">Quection No</label>
     <input
-      type="text"
+      type="number"
+      #quectionNo="ngModel"
       class="form-control"
-      id="quectionNoe"
       ngModel
+      id="quectionNo"
       name="quectionNo"
+      maxlength="10"
+      required
+      placeholder="enter quection number here"
+
     />
+    <div *ngIf="quectionNo.touched && quectionNo.invalid" class="alert alert-danger">
+     <div *ngIf="quectionNo.errors?.['required']">
+
+    quection no is required
+    </div>
+    <div *ngIf="quectionNo.errors?.['maxlength']">
+    only 10 quection allowed!.
+      </div>
+    </div> <br>
+
+
+
+
   </div>
 
   <div class="form-group">
-    <label>quection Name</label>
+    <label class="h6">quection Name</label>
     <input
       type="text"
+      #quectionName="ngModel"
       class="form-control"
-      id="quectionName"
       ngModel
+      id="quectionName"
       name="quectionName"
+      required
+      minlength="2"
+      placeholder="enter quection name here"
     />
+    <div *ngIf="quectionName.touched && quectionName.invalid" class="alert alert-danger">
+      <div *ngIf="quectionName.errors?.['required']">
+        quection name is required
+      </div>
+      <div *ngIf="quectionName.errors?.['minlength']">
+        Name must be at least 2 characters long.
+      </div>
+    </div>
   </div>
   <div class="modal-footer">
-    <button type="submit" class="btn btn-primary" >
+    <button type="submit" class="btn btn-primary" [disabled]="!addForm.valid">
       Save Course
     </button>
   </div>
 
 
 </form>
+</div>

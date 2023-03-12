@@ -8,16 +8,14 @@
           <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="Quections">Quection</a>
+          <a class="nav-link" routerLink="Quections" *ngIf="userService.roleMatch(['ROLE_ADMIN'])">Quection</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="Servey">Servey</a>
+          <a class="nav-link" routerLink="Servey" *ngIf="userService.roleMatch(['ROLE_USER'])">Servey</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" routerLink="AdminServeyView">AdminServeyView</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="UserServeyView" >UserServeyView</a>
+          <a class="nav-link" routerLink="UserServeyView"  *ngIf="userService.roleMatch(['ROLE_USER'])">UserServeyView</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="userTrack" *ngIf="userService.roleMatch(['ROLE_USER'])" >userTrack</a>

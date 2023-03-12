@@ -1,17 +1,26 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {IQuection} from "../../modules/quectionModle/quectionModle";
+import {IQuectionNew} from "../../modules/quectionModle/quectionModleForServey";
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuectionServiceService {
   private api_path="http://localhost:8080/api/question/"
+  requestHeader =new HttpHeaders({
+    "No-Auth":"True"
+  })
 
   constructor(private http:HttpClient) { }
   public getAllQuection():Observable<IQuection[]>{
     return this.http.get<IQuection[]>('http://localhost:8080/api/question/')
+  }
+
+  public GettAllQuectionForServey():Observable<IQuectionNew[]>{ console.log("testwork")
+    return this.http.get<IQuectionNew[]>('http://localhost:8080/api/question/serveyQuection/')
+
   }
 
   public addQuection(quection:IQuection):Observable<IQuection>{

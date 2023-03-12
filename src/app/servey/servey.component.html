@@ -1,55 +1,87 @@
-<p>servey works!</p>
-<form #addForm="ngForm" (ngSubmit)="createServey(addForm)">
-  <div class="form-group" *ngFor="let quection of quections">
+<!--<h1>Angular Nested FormArray / Dynamic FormArray</h1>-->
 
-    <label >
-      {{quection.quectionName}}</label>
+<!--<form [formGroup]="empForm" (ngSubmit)="onSubmit()">-->
+<!--  <input type="text" formControlName="firstName" />-->
+<!--  <div formArrayName="employees">-->
+<!--    <div *ngFor="let employee of employees().controls; let empIndex=index">-->
+<!--      <div-->
+<!--        [formGroupName]="empIndex"-->
+<!--        style="border: 1px solid blue; padding: 10px; width: 600px; margin: 5px;"-->
+<!--        *ngFor="let quection of quections"-->
+<!--      >-->
+<!--        {{empIndex}} quection :-->
+<!--        <input type="text" formControlName="firstName" placeholder="{{quection.quectionName}}">-->
 
-    <mat-radio-group aria-label="Select an option">
-      <mat-radio-button value="1">Option 1</mat-radio-button>
-      <mat-radio-button value="2">Option 2</mat-radio-button>
-      <mat-radio-button value="3">Option 3</mat-radio-button>
-      <mat-radio-button value="4">Option 4</mat-radio-button>
-      <mat-radio-button value="5">Option 5</mat-radio-button>
-    </mat-radio-group>
 
+
+<!--        <div formArrayName="skills">-->
+<!--          <div-->
+<!--            *ngFor="let skill of employeeSkills(empIndex).controls; let skillIndex=index"-->
+<!--          >-->
+<!--            <div [formGroupName]="skillIndex"-->
+<!--                 *ngFor="let answer of quection.answers">-->
+<!--              {{skillIndex}} answers :-->
+<!--              <input type="radio"  name="{{quection.quectionName}}" formControlName="skill" />-->
+
+
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <button type="button" (click)="addEmployeeSkill(empIndex)">-->
+<!--          Add Skill-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <button type="button" (click)="addEmployee()">Add Employee</button>-->
+<!--  </div>-->
+<!--</form>-->
+
+<!--{{this.empForm.value | json}}-->
+
+<!--<br /><br />-->
+<!--<a-->
+<!--  href="https://www.tektutorialshub.com/angular/nested-formarray-example-add-form-fields-dynamically/"-->
+<!--&gt;Nested FormArray / Dynamic FormArray</a-->
+<!--&gt;-->
+
+<!--<h1>asdasdas</h1>-->
+
+<!--<form [formGroup]="myForm" #addForm="ngForm" (ngSubmit)="createServey(addForm.value)">-->
+<!--  <label>userId</label>-->
+<!--  <input type="text" [formControl] ="userId" name="userId" >-->
+<!--  <div name="quectionLoopdiv" *ngFor="let quection of quections">-->
+<!--    <br><br>-->
+<!--    <input  type="text" [formControl] ="quection1" value ="{{quection.quectionName}}" placeholder="{{quection.quectionName}}">-->
+
+<!--&lt;!&ndash;    <div formArrayName="myArray">&ndash;&gt;-->
+<!--      <div formArrayName="myArray" *ngFor="let control of myArray.controls; let i = index">-->
+<!--          <div name="answerLoopDiv" *ngFor="let answer of quection.answers" >-->
+<!--            <input type="text" [formControlName]="i" name="12" value="12">-->
+<!--&lt;!&ndash;            <input type="radio" formControlName="i" name="{{quection.quectionName}}" value="{{answer.weight}}">&ndash;&gt;-->
+<!--&lt;!&ndash;            <label>{{answer.answerText}}</label>&ndash;&gt;-->
+<!--          </div>-->
+<!--          </div>-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--  </div>-->
+<!--  <button type="submit" >check</button>-->
+<!--</form>-->
+
+
+<form #addForm="ngForm" (ngSubmit)="createServey(addForm.value)">
+  <label>userId</label>
+  <input type="text" [formControl] ="userId" name="userId" >
+  <div name="quectionLoopdiv" *ngFor="let quection of quections">
+    <br><br>
+
+    <input  type="text" [formControl] ="quection1" value ="{{quection.quectionName}}" placeholder="{{quection.quectionName}}">
+    <div name="answerLoopDiv" *ngFor="let answer of quection.answers" >
+      <input type="radio" [formControl]="answer1" name="{{quection.quectionName}}" value="{{answer.weight}}">
+      <label>{{answer.answerText}}</label>
+    </div>
   </div>
-
-
-
-
+  <button type="submit" >check</button>
 </form>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--    <mat-radio-group aria-label="Select an option">-->
-<!--    <mat-radio-button value="1">Option 1</mat-radio-button>-->
-<!--    <mat-radio-button value="2">Option 2</mat-radio-button>-->
-<!--    <mat-radio-button value="3">Option 3</mat-radio-button>-->
-<!--    <mat-radio-button value="4">Option 4</mat-radio-button>-->
-<!--    <mat-radio-button value="5">Option 5</mat-radio-button>-->
-<!--  </mat-radio-group>-->

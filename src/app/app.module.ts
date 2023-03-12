@@ -20,7 +20,7 @@ import {MatRadioModule} from '@angular/material/radio';
 //import { QuectionComponent } from './modules/quectionModle/quection.component';
 //import { QuectionServiceComponent } from './service/quection-service/quection-service.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AddQuectionComponent } from './dialogBox/add-quection/add-quection.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from "@angular/material/dialog";
@@ -34,6 +34,12 @@ import { AuthComponent } from './auth/auth.component';
 import {UserService} from "./service/user.service";
 import {AuthGuard} from "./auth/auth.guard";
 import {AuthInterceptor} from "./auth/auth.interceptor";
+import { UserAlResultComponent } from './user-al-result/user-al-result.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatSelectModule} from "@angular/material/select";
+import {MatIconModule} from "@angular/material/icon";
+import { UserServeyViewByAdminComponent } from './user-servey-view-by-admin/user-servey-view-by-admin.component';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +62,8 @@ import {AuthInterceptor} from "./auth/auth.interceptor";
     ForbiddenComponent,
     AdminComponent,
     AuthComponent,
+    UserAlResultComponent,
+    UserServeyViewByAdminComponent,
     //QuectionComponent,
    // QuectionServiceComponent
   ],
@@ -70,7 +78,12 @@ import {AuthInterceptor} from "./auth/auth.interceptor";
     HttpClientModule,
     MatTableModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatIconModule
+
   ],
   providers: [
     AuthGuard,
