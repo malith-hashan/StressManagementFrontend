@@ -26,6 +26,7 @@
         </li>
       </ul>
       <button *ngIf="!isLogedin()" type="button" class="btn-success" routerLink="SignIn">SignIn</button>
+    <button *ngIf="!isLogedin()" type="button" class="btn-success" routerLink="SignUp">SignUp</button>
       <button *ngIf="isLogedin()" type="button" class="btn-success" routerLink="SignIn" (click)="isLogout()">LogOUT</button>
 
     </div>

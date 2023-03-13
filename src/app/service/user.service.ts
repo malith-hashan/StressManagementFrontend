@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {NgForm} from "@angular/forms";
 import {UserAuthService} from "./user-auth.service";
+import {SignUpRequestModle} from "../modules/signUpRequestModle";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -40,5 +42,19 @@ export class UserService {
     }
   }
 
+  // public signUP(userSignUp:SignUpRequestModle):Observable<SignUpRequestModle>{
+  //   console.log("success")
+  //   return this.httpclient.post<SignUpRequestModle>(this.PATH_OF_API +"/signup",userSignUp)
+  //
+  // }
+  // public signUP(userSignUp:SignUpRequestModle):Observable<SignUpRequestModle>{
+  //   console.log("success")
+  //   return this.httpclient.post<SignUpRequestModle>(this.PATH_OF_API +"/signup",userSignUp)
+  //
+  // }
 
+  public signUP(userSignUp:SignUpRequestModle) {
+    return this.httpclient.post(this.PATH_OF_API +"/signup",userSignUp);
+
+}
 }

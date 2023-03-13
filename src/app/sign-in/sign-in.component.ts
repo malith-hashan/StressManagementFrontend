@@ -4,6 +4,8 @@ import {UserService} from "../service/user.service";
 import {UserAuthService} from "../service/user-auth.service";
 import {Router} from "@angular/router";
 import {SharedService} from "../service/shared.service";
+import {MatDialog} from "@angular/material/dialog";
+import {SignUpComponent} from "../sign-up/sign-up.component";
 
 @Component({
   selector: 'app-sign-in',
@@ -14,7 +16,8 @@ export class SignInComponent {
   constructor(private userservice: UserService,
               private userAuthService: UserAuthService,
               private router :Router,
-              private sharedService :SharedService) {
+              private sharedService :SharedService,
+              private matDialog:MatDialog) {
   }
 
   login(loginForm: NgForm) {
@@ -44,5 +47,9 @@ export class SignInComponent {
     )
 
   }
+  // gotoSignup(){
+  //   console.log("signup button work")
+  //   this.matDialog.open(SignUpComponent)
+  // }
 
 }

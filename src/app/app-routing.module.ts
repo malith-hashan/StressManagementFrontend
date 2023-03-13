@@ -11,6 +11,7 @@ import {ForbiddenComponent} from "./forbidden/forbidden.component";
 import {AdminComponent} from "./admin/admin.component";
 import {UserTrackComponent} from "./user-track/user-track.component";
 import {AuthGuard} from "./auth/auth.guard";
+import {SignUpComponent} from "./sign-up/sign-up.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'AdminServeyView', component: ViewAllserveysComponent},
   {path: 'UserServeyView', component: UserServerViewComponent},
   {path: 'SignIn', component: SignInComponent},
+  {path: 'SignUp', component: SignUpComponent},
   {path: 'Forbidden', component: ForbiddenComponent},
   {path: 'userTrack', component: UserTrackComponent ,canActivate:[AuthGuard],data:{roles:['ROLE_USER']}},
   {path: 'admin', component: AdminComponent ,canActivate:[AuthGuard],data:{roles:['ROLE_ADMIN']}}
