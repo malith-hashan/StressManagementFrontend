@@ -1,0 +1,10 @@
+.selector {
+  /*background-image: url("../../../old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg");*/
+  background-color: blue;
+}
+.alert {
+  font-size: 14px; /* Adjust the font size */
+  margin-top: 0px; /* Adjust the margin top */
+  margin-bottom: 1px; /* Adjust the margin bottom */
+  padding: 0px; /* Adjust the padding */
+}

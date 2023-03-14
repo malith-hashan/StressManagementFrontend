@@ -1,6 +1,6 @@
 <form #addForm="ngForm" (ngSubmit)="onSubmit(addForm)">
   <label>userId</label>
-  <input type="text" name="userId" name="userId">
+  <input [(ngModel)]="userId" type="text" name="userId" name="userId">
   <div *ngFor="let question of quections; let i = index">
     <p>{{ i + 1 }}. {{ question.quectionName }}</p>
     <div>

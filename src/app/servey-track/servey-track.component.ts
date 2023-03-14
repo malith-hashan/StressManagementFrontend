@@ -13,20 +13,19 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class ServeyTrackComponent implements OnInit{
 
-  quections: IQuectionNew[] = [];
-
-  q1:string =this.quections[0].quectionName;
-
+quections: IQuectionNew[] = [];
+  //
+  // q1:string =this.quections[0].quectionName;
+  //
   servey=new FormGroup({
     userId:new FormControl(),
     quection1:new FormControl(),
     answer1:new FormControl()
   })
 
+ngOnInit() {
 
-
-
-ngOnInit() {console.log(this.q1);this.quectionservice.GettAllQuectionForServey().subscribe(
+    this.quectionservice.GettAllQuectionForServey().subscribe(
   (respoce: IQuectionNew[]) => {
     this.quections = respoce;
     console.log(respoce.length)
@@ -48,8 +47,8 @@ ngOnInit() {console.log(this.q1);this.quectionservice.GettAllQuectionForServey()
   }
 
 
+  onSubmit(addForm: any) {
 
 
-
-
+  }
 }

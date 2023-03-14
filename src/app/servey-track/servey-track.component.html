@@ -1,56 +1,29 @@
-<!--<form #form="ngForm" xmlns="http://www.w3.org/1999/html">-->
-<!--  <div *ngFor="let quection of quections">-->
 
-<!--  <h2>Question 1</h2>-->
-<!--  <div class="form-group">-->
-<!--    <label for="q1a1">-->
-<!--      <input type="radio" name="q1" id="q1a1" value="q1a1" [(ngModel)]="quection[0]." required>-->
-<!--      Answer 1-->
-<!--    </label>-->
-<!--    <label for="q1a2">-->
-<!--      <input type="radio" name="q1" id="q1a2" value="q1a2" [(ngModel)]="formData.q1">-->
-<!--      Answer 2-->
-<!--    </label>-->
-<!--    <label for="q1a3">-->
-<!--      <input type="radio" name="q1" id="q1a3" value="q1a3" [(ngModel)]="formData.q1">-->
-<!--      Answer 3-->
-<!--    </label>-->
-<!--    <label for="q1a4">-->
-<!--      <input type="radio" name="q1" id="q1a4" value="q1a4" [(ngModel)]="formData.q1">-->
-<!--      Answer 4-->
-<!--    </label>-->
-<!--    <label for="q1a5">-->
-<!--      <input type="radio" name="q1" id="q1a5" value="q1a5" [(ngModel)]="formData.q1">-->
-<!--      Answer 5-->
-<!--    </label>-->
-<!--  </div>-->
 
-<!--  <h2>Question 2</h2>-->
-<!--  <div class="form-group">-->
-<!--    <label for="q2a1">-->
-<!--      <input type="radio" name="q2" id="q2a1" value="q2a1" [(ngModel)]="formData.q2" required>-->
-<!--      Answer 1-->
-<!--    </label>-->
-<!--    <label for="q2a2">-->
-<!--      <input type="radio" name="q2" id="q2a2" value="q2a2" [(ngModel)]="formData.q2">-->
-<!--      Answer 2-->
-<!--    </label>-->
-<!--    <label for="q2a3">-->
-<!--      <input type="radio" name="q2" id="q2a3" value="q2a3" [(ngModel)]="formData.q2">-->
-<!--      Answer 3-->
-<!--    </label>-->
-<!--    <label for="q2a4">-->
-<!--      <input type="radio" name="q2" id="q2a4" value="q2a4" [(ngModel)]="formData.q2">-->
-<!--      Answer 4-->
-<!--    </label>-->
-<!--    <label for="q2a5">-->
-<!--      <input type="radio" name="q2" id="q2a5" value="q2a5" [(ngModel)]="formData.q2">-->
-<!--      Answer 5-->
-<!--    </label>-->
-<!--  </div>-->
+<form [formGroup]="servey" (ngSubmit)="onSubmit(servey)">
+  <label>userId</label>
+  <input formControlName="userId" type="text" name="userId" >
+  <div *ngFor="let question of quections; let i = index">
+    <p  >{{ i + 1 }}. {{ question.quectionName }}</p>
+    <div>
+      <label>
+        <input type="radio" formControlName="{{i}}" value="1" name="question.answers"> answer1
+      </label>
+      <label>
+        <input type="radio" formControlName="{{i}}" value="2" name="question.answers"> answer2
+      </label>
+      <label>
+        <input type="radio" formControlName="{{i}}" value="3" name="question.answers"> answer3
+      </label>
+      <label>
+        <input type="radio" formControlName="{{i}}" value="4" name="question.answers"> answer4
+      </label>
+      <label>
+        <input type="radio" formControlName="{{i}}" value="5" name="question.answers"> answer5
+      </label>
 
-<!--  &lt;!&ndash; repeat for the other 8 questions &ndash;&gt;-->
 
-<!--  <button type="submit" [disabled]="!form.valid">Submit</button>-->
-<!--    </div>-->
-<!--</form>-->
+    </div>
+  </div>
+  <button type="submit">check</button>
+</form>

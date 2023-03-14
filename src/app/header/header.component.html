@@ -13,6 +13,9 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="Servey" *ngIf="userService.roleMatch(['ROLE_USER'])">Servey</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="Servey2" *ngIf="userService.roleMatch(['ROLE_USER'])">Servey2</a>
+        </li>
 
         <li class="nav-item">
           <a class="nav-link" routerLink="UserServeyView"  *ngIf="userService.roleMatch(['ROLE_USER'])">UserServeyView</a>
@@ -25,9 +28,9 @@
           <a class="nav-link active" aria-current="page" routerLink="admin" *ngIf="userService.roleMatch(['ROLE_ADMIN'])">admin</a>
         </li>
       </ul>
-      <button *ngIf="!isLogedin()" type="button" class="btn-success" routerLink="SignIn">SignIn</button>
-    <button *ngIf="!isLogedin()" type="button" class="btn-success" routerLink="SignUp">SignUp</button>
-      <button *ngIf="isLogedin()" type="button" class="btn-success" routerLink="SignIn" (click)="isLogout()">LogOUT</button>
+      <button *ngIf="!isLogedin()" type="button" class="btn btn-outline-primary"  routerLink="SignIn">SignIn</button>
+    <button *ngIf="!isLogedin()" type="button" class="btn btn-outline-primary"  routerLink="SignUp">SignUp</button>
+      <button *ngIf="isLogedin()" type="button"class="btn btn-outline-primary"  routerLink="SignIn" (click)="isLogout()">LogOUT</button>
 
     </div>
 

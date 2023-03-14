@@ -1,13 +1,18 @@
-export interface AnswerArray{
-  quectionName:string;
-  answerValue:number;
+// export interface AnswerArray{
+//   quectionMap :Map<string,number>
+
+// }
+
+
+
+export interface ServeyCreateModle {
+
+  userId: string;
+  answers: Array<Map<string, number>>;
+
 }
 
-
-
-export interface ServeyCreateModle{
-
-  userid:number;
-  userAnswerdQuection:AnswerArray[];
-
+export interface AnswerModel {
+  quectionName: string,
+  answer: number
 }

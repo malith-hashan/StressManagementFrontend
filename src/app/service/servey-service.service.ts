@@ -18,10 +18,10 @@ export class ServeyServiceService {
   }
 
   public createServey(servey:ServeyCreateModle):Observable<ServeyCreateModle>{
-    console.log("servey work")
+    console.log("servey service  work")
     console.log(servey);
     return this.http.post<ServeyCreateModle>(
-      'http://localhost:8080/api/servey/1',servey
+      'http://localhost:8080/api/servey/',servey
     )
   }
 public getServeyByUserId(id:number):Observable<ServeyModle[]>{

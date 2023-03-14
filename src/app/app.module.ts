@@ -39,6 +39,8 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatIconModule} from "@angular/material/icon";
 import { UserServeyViewByAdminComponent } from './user-servey-view-by-admin/user-servey-view-by-admin.component';
+import { ModalTemplateComponent } from './modal-template/modal-template.component';
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -64,27 +66,29 @@ import { UserServeyViewByAdminComponent } from './user-servey-view-by-admin/user
     AuthComponent,
     UserAlResultComponent,
     UserServeyViewByAdminComponent,
+    ModalTemplateComponent,
     //QuectionComponent,
    // QuectionServiceComponent
   ],
-  imports: [
+    imports: [
 
-    BrowserModule,
-    RouterModule,
-    AppRoutingModule,
-    FormsModule,
-    MatRadioModule,
-    MatDialogModule,
-    HttpClientModule,
-    MatTableModule,
-    MatDialogModule,
-    BrowserAnimationsModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatSelectModule,
-    MatIconModule
+        BrowserModule,
+        RouterModule,
+        AppRoutingModule,
+        FormsModule,
+        MatRadioModule,
+        MatDialogModule,
+        HttpClientModule,
+        MatTableModule,
+        MatDialogModule,
+        BrowserAnimationsModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatSelectModule,
+        MatIconModule,
+        MatButtonModule
 
-  ],
+    ],
   providers: [
     AuthGuard,
     {

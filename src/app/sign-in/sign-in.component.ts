@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {UserService} from "../service/user.service";
 import {UserAuthService} from "../service/user-auth.service";
@@ -6,18 +6,22 @@ import {Router} from "@angular/router";
 import {SharedService} from "../service/shared.service";
 import {MatDialog} from "@angular/material/dialog";
 import {SignUpComponent} from "../sign-up/sign-up.component";
+import {ModalTemplateComponent} from "../modal-template/modal-template.component";
+
 
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css']
 })
-export class SignInComponent {
+export class SignInComponent  implements OnInit{
   constructor(private userservice: UserService,
               private userAuthService: UserAuthService,
               private router :Router,
               private sharedService :SharedService,
               private matDialog:MatDialog) {
+  }
+  ngOnInit() { document.body.className = "selector";
   }
 
   login(loginForm: NgForm) {
@@ -43,13 +47,23 @@ export class SignInComponent {
       },
       (error) => {
         console.log(error);
+        const errorMsg = "Invalid username or password";
+        this.openErrorModal(errorMsg);
       }
     )
 
   }
-  // gotoSignup(){
-  //   console.log("signup button work")
-  //   this.matDialog.open(SignUpComponent)
-  // }
+  gotoSignup(){
+    console.log("signup button work")
+    this.router.navigate(['/SignUp'])
+
+  }
+
+  openErrorModal(errorMsg: string) {
+    const dialogRef = this.matDialog.open(ModalTemplateComponent, {
+      data: { message: errorMsg },
+    });
+  }
+
 
 }

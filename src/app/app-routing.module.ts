@@ -12,11 +12,13 @@ import {AdminComponent} from "./admin/admin.component";
 import {UserTrackComponent} from "./user-track/user-track.component";
 import {AuthGuard} from "./auth/auth.guard";
 import {SignUpComponent} from "./sign-up/sign-up.component";
+import {ServeyTrackComponent} from "./servey-track/servey-track.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'Quections', component: ViewQuectionsComponent},
   {path: 'Servey', component: ServeyComponent},
+  {path: 'Servey2', component: ServeyTrackComponent},
   {path: 'EditQuection/:id', component: EditQuectionsComponent},
   {path: 'AdminServeyView', component: ViewAllserveysComponent},
   {path: 'UserServeyView', component: UserServerViewComponent},
