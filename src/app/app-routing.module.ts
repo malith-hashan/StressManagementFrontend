@@ -13,9 +13,13 @@ import {UserTrackComponent} from "./user-track/user-track.component";
 import {AuthGuard} from "./auth/auth.guard";
 import {SignUpComponent} from "./sign-up/sign-up.component";
 import {ServeyTrackComponent} from "./servey-track/servey-track.component";
+import {HomeUserComponent} from "./home-user/home-user.component";
+import {HomeAdminComponent} from "./home-admin/home-admin.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
+  {path: 'homeUser', component: HomeUserComponent},
+  {path: 'homeAdmin', component: HomeAdminComponent},
   {path: 'Quections', component: ViewQuectionsComponent},
   {path: 'Servey', component: ServeyComponent},
   {path: 'Servey2', component: ServeyTrackComponent},

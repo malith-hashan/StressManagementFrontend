@@ -41,6 +41,8 @@ import {MatIconModule} from "@angular/material/icon";
 import { UserServeyViewByAdminComponent } from './user-servey-view-by-admin/user-servey-view-by-admin.component';
 import { ModalTemplateComponent } from './modal-template/modal-template.component';
 import {MatButtonModule} from "@angular/material/button";
+import { HomeUserComponent } from './home-user/home-user.component';
+import { HomeAdminComponent } from './home-admin/home-admin.component';
 
 
 @NgModule({
@@ -67,6 +69,8 @@ import {MatButtonModule} from "@angular/material/button";
     UserAlResultComponent,
     UserServeyViewByAdminComponent,
     ModalTemplateComponent,
+    HomeUserComponent,
+    HomeAdminComponent,
     //QuectionComponent,
    // QuectionServiceComponent
   ],
