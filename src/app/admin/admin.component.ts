@@ -18,10 +18,14 @@ export class AdminComponent {
   public goToViewAllServeyComponent() {
     this.matDialog.open(ViewAllserveysComponent, {
       maxWidth: '100vw',
+         
       maxHeight: '100vh',
       width: '60%',
     });
   }
+
+
+
   public goToUserServeyViewComponent() {
     this.matDialog.open(UserServeyViewByAdminComponent, {
       maxWidth: '100vw',

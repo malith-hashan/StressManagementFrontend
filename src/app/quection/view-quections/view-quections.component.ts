@@ -49,7 +49,7 @@ export class ViewQuectionsComponent implements OnInit{
   // }
 
   public DeleteQuection(id: string): void {
-    if (confirm('Are you sure want to delete course?')) {
+    if (confirm('Are you sure want to delete question?')) {
       this.quectionService.deleteQuection(id).subscribe(
         (response: void) => {
           console.log(response);
@@ -57,7 +57,7 @@ export class ViewQuectionsComponent implements OnInit{
           window.location.reload();
         },
         (HttpErrorResponse) => {
-          alert('Course Deleted');
+          // alert('Course Deleted');
           window.location.reload();
         }
       );

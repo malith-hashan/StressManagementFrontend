@@ -1,8 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-<!--    <a class="navbar-brand" routerLink="#!">Start Bootstrap</a>-->
-<!--    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>-->
-<!--    <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/home" *ngIf="!isLogedin()">Home</a>
@@ -10,12 +7,11 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="homeAdmin" *ngIf="userService.roleMatch(['ROLE_ADMIN'])">Home</a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" routerLink="homeUser" *ngIf="userService.roleMatch(['ROLE_USER'])">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="Quections" *ngIf="userService.roleMatch(['ROLE_ADMIN'])">Quection</a>
+          <a class="nav-link" routerLink="Quections" *ngIf="userService.roleMatch(['ROLE_ADMIN'])">Question</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="Servey" *ngIf="userService.roleMatch(['ROLE_USER'])">Servey</a>
@@ -24,15 +20,11 @@
           <a class="nav-link" routerLink="UserServeyView"  *ngIf="userService.roleMatch(['ROLE_USER'])">UserServeyView</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="admin" *ngIf="userService.roleMatch(['ROLE_ADMIN'])">admin</a>
+          <a class="nav-link active" aria-current="page" routerLink="admin" *ngIf="userService.roleMatch(['ROLE_ADMIN'])">Servey</a>
         </li>
       </ul>
       <button *ngIf="!isLogedin()" type="button" class="btn btn-outline-primary"  routerLink="SignIn">SignIn</button>
-<!--    <button *ngIf="!isLogedin()" type="button" class="btn btn-outline-primary"  routerLink="SignUp">SignUp</button>-->
       <button *ngIf="isLogedin()" type="button"class="btn btn-outline-primary"  routerLink="SignIn" (click)="isLogout()">LogOUT</button>
-
     </div>
-
-<!--  </div>-->
 </nav>
 <router-outlet></router-outlet>

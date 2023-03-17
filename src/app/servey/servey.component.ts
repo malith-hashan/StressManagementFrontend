@@ -21,7 +21,8 @@ export class ServeyComponent {
   formModal:any;
   userResult:any;
   UserName:any;
-  modalBody:any;
+  // modalBody:any;
+
 
   constructor(private fb: FormBuilder,
               private serveyService: ServeyServiceService,
@@ -48,24 +49,6 @@ export class ServeyComponent {
     })
 
     ;
-
-  }
-  checkTheResponce(){
-    if(this.userResult="HIGH_STRESS"){
-      this.modalBody="you are in high stress.!!!!"
-    }
-    else if(this.userResult="MEDIUM_STRESS"){
-      this.modalBody="you are in medium stress.!!!"
-    }
-    else if(this.userResult="LOW_STRESS"){
-      this.modalBody="you are in low stress.!!"
-    }
-    else if(this.userResult="NORMAL"){
-      this.modalBody="you are normal .!"
-    }
-    else if(this.userResult="CALCULATION_ERROR"){
-      this.modalBody="sorry we got a CALCULATION_ERROR .!!"
-    }
 
   }
 
@@ -120,7 +103,5 @@ export class ServeyComponent {
     this.renderer.setStyle(modal, 'display', 'none');
     this.formModal.hide();
   }
-
-
 
 }

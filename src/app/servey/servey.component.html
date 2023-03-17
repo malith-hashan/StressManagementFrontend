@@ -16,7 +16,7 @@
     <div class="form-group row">
       <label for="userId" class="col-sm-2 col-form-label statement2">User ID</label>
       <div class="col-sm-4">
-        <input [(ngModel)]="userId" type="text" class="form-control" placeholder="Enter Your Company UserId hear" id="userId" name="userId">
+        <input required [(ngModel)]="userId" type="text" class="form-control" placeholder="Enter Your Company UserId hear" id="userId" name="userId">
       </div>
     </div>
     <div *ngFor="let question of quections; let i = index">
@@ -54,7 +54,7 @@
     </div>
     <div class="buttons">
 
-      <button class="btn-dark submit">Submit</button>
+      <button class="btn btn-outline-success submit" [disabled]="addForm.invalid">Submit</button>
     </div>
 
   </form>
@@ -63,22 +63,24 @@
 
 <div class="modal" id="myModal">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content shadow p-3 mb-5 bg-body-tertiary rounded">
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title"><b>hi {{UserName}}. Your Servey responce submitted correctly </b></h4>
+        <h4 class="modal-title"><b>Hi {{UserName}}. Your Servey responce submitted correctly </b></h4>
         <button type="button" (click)="closeModal() "class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body">
         <p> you are in <b style="color: #67ab49">{{userResult}}</b> !!</p>
+        <p>Check your history from UserServeyView</p>
       </div>
 
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="button" (click)="closeModal()" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+
+        <button type="button" (click)="closeModal()" class="btn btn-danger"  data-bs-dismiss="modal">Close</button>
       </div>
 
     </div>

@@ -8,9 +8,9 @@ describe('ViewAllserveysComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewAllserveysComponent ]
+      declarations: [ViewAllserveysComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ViewAllserveysComponent);
     component = fixture.componentInstance;
