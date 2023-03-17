@@ -1,0 +1,24 @@
+body {
+  /*background-image: url("/assets/backgroundImage.jpg");*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+background-color: black;
+  ;
+}
+h1
+{
+  font-family: "Courier New", sans-serif;
+  color: white;
+  font-size: 6rem;
+  line-height: 1.5;
+  font-weight: bold;
+
+}
+div.card{
+  margin-right: 12px;
+  margin-top: -140px;
+  margin-bottom: 0px;
+}
+p.lead{
+  color:grey;
+}

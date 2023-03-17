@@ -1,6 +1,25 @@
 <div class="container-fluid page">
-  <div class="d-flex page__box p-3 mt-2"><h1 class="display-4">Quection List</h1></div>
+
+  <div class="nav-header">
+
+
+    <header class="text-center text-white py-5" style="background-image:url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
+      <div class="nav-brand">
+        <img src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/bradlogo2.png">
+      </div>
+      <i class="fa fa-bars fa-3x"></i>
+      <h1 class="display-5 font-weight-bold mb-4"><u>List of Quections</u></h1>
+      <p class="lead mb-0">find all the quection that visible to the users servey.</p>
+      <p class="font-italic">make changes if nessoory
+
+      </p>
+    </header>    </div>
+
+
   <div class="page__content shadow p-3 position-relative" id="main-container">
+
+    <div class="p-3"> <button class="btn btn-warning" (click)="openDialog()" >add quections!</button></div>
+
     <table class="table table-secondary table-striped">
       <thead>
       <tr>
@@ -32,7 +51,7 @@
 
 
     </table>
-    <button class="btn btn-warning" (click)="openDialog()" >add quections!</button>
+
 
   </div>
 </div>

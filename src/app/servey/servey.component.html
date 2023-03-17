@@ -1,55 +1,88 @@
-<p>servey works!</p>
-<form #addForm="ngForm" (ngSubmit)="createServey(addForm)">
-  <div class="form-group" *ngFor="let quection of quections">
+<div class="wrap">
+  <div class="nav-header" style="margin-bottom: 20px">
 
-    <label >
-      {{quection.quectionName}}</label>
 
-    <mat-radio-group aria-label="Select an option">
-      <mat-radio-button value="1">Option 1</mat-radio-button>
-      <mat-radio-button value="2">Option 2</mat-radio-button>
-      <mat-radio-button value="3">Option 3</mat-radio-button>
-      <mat-radio-button value="4">Option 4</mat-radio-button>
-      <mat-radio-button value="5">Option 5</mat-radio-button>
-    </mat-radio-group>
+    <header class="text-center text-white py-5" style="background-image:url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
+      <div class="nav-brand">
+        <img src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/bradlogo2.png">
+      </div>
+      <i class="fa fa-bars fa-3x"></i>
+      <h1 class="display-5 font-weight-bold mb-4"><u>Check Your Stress Level</u></h1>
+      <p class="lead ">fill this questions and find your result.</p>
 
+    </header>    </div>
+
+  <form #addForm="ngForm" (ngSubmit)="onSubmit(addForm)">
+    <div class="form-group row">
+      <label for="userId" class="col-sm-2 col-form-label statement2">User ID</label>
+      <div class="col-sm-4">
+        <input required [(ngModel)]="userId" type="text" class="form-control" placeholder="Enter Your Company UserId hear" id="userId" name="userId">
+      </div>
+    </div>
+    <div *ngFor="let question of quections; let i = index">
+      <p  class="statement">{{ i + 1 }}. {{ question.quectionName }}</p>
+      <div>
+        <ul class='likert'>
+          <li>
+            <label  >
+              <input required type="radio" name="answer{{i}}" value="1" [(ngModel)]="question.answers"> Strongly agree
+            </label>
+          </li>
+          <li>
+            <label>
+              <input required type="radio" name="answer{{i}}" value="2" [(ngModel)]="question.answers"> Agree
+            </label>
+          </li>
+          <li>
+            <label>
+              <input required type="radio" name="answer{{i}}" value="3" [(ngModel)]="question.answers"> Neutral
+            </label>
+          </li>
+          <li>
+            <label>
+              <input required type="radio" name="answer{{i}}" value="4" [(ngModel)]="question.answers"> Disagree
+            </label>
+          </li>
+          <li>
+            <label>
+              <input required  type="radio" name="answer{{i}}" value="5" [(ngModel)]="question.answers"> Strongly disagree
+            </label>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="buttons">
+
+      <button class="btn btn-outline-success submit" [disabled]="addForm.invalid">Submit</button>
+    </div>
+
+  </form>
+</div>
+
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content shadow p-3 mb-5 bg-body-tertiary rounded">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><b>Hi {{UserName}}. Your Servey responce submitted correctly </b></h4>
+        <button type="button" (click)="closeModal() "class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p> you are in <b style="color: #67ab49">{{userResult}}</b> !!</p>
+        <p>Check your history from UserServeyView</p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+
+        <button type="button" (click)="closeModal()" class="btn btn-danger"  data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
   </div>
-
-
-
-
-</form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--    <mat-radio-group aria-label="Select an option">-->
-<!--    <mat-radio-button value="1">Option 1</mat-radio-button>-->
-<!--    <mat-radio-button value="2">Option 2</mat-radio-button>-->
-<!--    <mat-radio-button value="3">Option 3</mat-radio-button>-->
-<!--    <mat-radio-button value="4">Option 4</mat-radio-button>-->
-<!--    <mat-radio-button value="5">Option 5</mat-radio-button>-->
-<!--  </mat-radio-group>-->
+</div>
