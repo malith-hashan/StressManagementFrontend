@@ -1,33 +1,14 @@
 <div class="page__content shadow p-3 position-relative" id="main-container">
-<div class="nav-header">
-
-
-  <header class="text-center text-white py-3 bg-dark" >
-
-    <h1 class="display-5 font-weight-bold mb-4"><u>add quection</u></h1>
-
-
-  </header>    </div>
-
-
-
+  <div class="nav-header">
+    <header class="text-center text-white py-3 bg-dark">
+      <h1 class="display-5 font-weight-bold mb-4"><u>add quection</u></h1>
+    </header>
+  </div>
   <form #addForm="ngForm" (ngSubmit)="addQuection(addForm)">
-
     <div class="form-group">
       <label class="h6">Quection No</label>
-      <input
-        type="number"
-        #quectionNo="ngModel"
-        class="form-control"
-        ngModel
-        id="quectionNo"
-        name="quectionNo"
-        required
-        maxlength="2"
-        min="1"
-        max="10"
-        placeholder="Enter question number (1-10)"
-      />
+      <input type="number" #quectionNo="ngModel" class="form-control" ngModel id="quectionNo" name="quectionNo" required
+        maxlength="2" min="1" max="10" placeholder="Enter question number (1-10)" />
       <div *ngIf="quectionNo.touched && quectionNo.invalid" class="alert alert-danger">
         <div *ngIf="quectionNo.errors?.['required']">
           Question number is required
@@ -43,20 +24,10 @@
         </div>
       </div>
     </div>
-
     <div class="form-group">
       <label class="h6">quection Name</label>
-      <input
-        type="text"
-        #quectionName="ngModel"
-        class="form-control"
-        ngModel
-        id="quectionName"
-        name="quectionName"
-        required
-        minlength=2
-        placeholder="enter quection name here"
-      />
+      <input type="text" #quectionName="ngModel" class="form-control" ngModel id="quectionName" name="quectionName"
+        required minlength=2 placeholder="enter quection name here" />
       <div *ngIf="quectionName.touched && quectionName.invalid" class="alert alert-danger">
         <div *ngIf="quectionName.errors?.['required']">
           quection name is required
@@ -71,6 +42,5 @@
         Save Course
       </button>
     </div>
-
   </form>
 </div>

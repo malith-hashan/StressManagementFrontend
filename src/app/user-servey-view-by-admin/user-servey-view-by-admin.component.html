@@ -1,53 +1,41 @@
-<div
-  class="d-flex justify-content-md-center align-items-center vh-20  "
-  id="main"
->
+<div class="d-flex justify-content-md-center align-items-center vh-20  " id="main">
   <div class="container-fluid page">
-
-
     <div class="nav-header mt-2">
-
-
-      <header class="text-center text-white py-3 bg-dark" >
-
+      <header class="text-center text-white py-3 bg-dark">
         <h1 class="display-5 font-weight-bold mb-4"><u>user servey result</u></h1>
         <p class="font-italic">Enter the user id to fine all servey deatails of him/her
-
         </p>
-      </header>    </div>
-
-    <!--    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-
-    <div class="p-1"><h2><b>user name: {{username1}}</b></h2></div>
+      </header>
+    </div>
+    <div class="p-1">
+      <h2><b>user name: {{username1}}</b></h2>
+    </div>
     <div class="page__content shadow p-3 position-relative" id="main-container">
-      <form  #userForm="ngForm" >
+      <form #userForm="ngForm">
         <br>
-        <input  class="form-control"placeholder="enter user id hear.."#userEnterdValue  type="number"  name="userId" id="userId"  >
+        <input class="form-control" placeholder="enter user id hear.." #userEnterdValue type="number" name="userId"
+          id="userId">
         <div class="d-grid gap-2">
-          <button type="button" class="btn btn-secondary btn-sm" name="submitButton" id="submitButton" (click)="getAllServeyByUserId(userEnterdValue.value)" >find</button>
+          <button type="button" class="btn btn-secondary btn-sm" name="submitButton" id="submitButton"
+            (click)="getAllServeyByUserId(userEnterdValue.value)">find</button>
         </div>
       </form>
       <br>
       <table class="table table-secondary table-striped">
         <thead>
-        <tr>
-          <th scope="col">servey Date</th>
-          <th scope="col">result </th>
+          <tr>
+            <th scope="col">servey Date</th>
+            <th scope="col">result </th>
 
-        </tr>
+          </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let servey of serveys">
-          <td>{{ servey.date|date}}</td>
-          <td>{{ servey.userResult }}</td>
-
-
-        </tr>
+          <tr *ngFor="let servey of serveys">
+            <td>{{ servey.date|date}}</td>
+            <td>{{ servey.userResult }}</td>
+          </tr>
         </tbody>
-
-
       </table>
-
     </div>
   </div>
 </div>

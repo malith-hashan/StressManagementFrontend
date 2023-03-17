@@ -1,87 +1,47 @@
-
-<!--<body style="background-image:C:\Users\malit\Desktop\server2Frontend\serveyFrontend\old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg></body>-->
 <div class="shadow p-3 mb-5 bg-body-tertiary rounded mx-auto" style="margin: 1%; padding: 10%;width: 50%;">
   <div class="nav-header">
-
-
-    <header class="text-center text-white py-5" style="background-image:url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
+    <header class="text-center text-white py-5"
+      style="background-image:url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
       <div class="nav-brand">
         <img src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/bradlogo2.png">
       </div>
       <i class="fa fa-bars fa-3x"></i>
       <h1 class="display-5 font-weight-bold mb-4"><u>Sign In</u></h1>
-
-    </header>    </div>
-
-
-
-
-
-
-      <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
-    <form  class="row g-3 " #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    </header>
+  </div>
+  <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+    <form class="row g-3 " #loginForm="ngForm" (ngSubmit)="login(loginForm)">
       <input type="text"
-
-             ngModel
-             name="username"
-             id="username"
-             placeholder="Enter your username"
-             class="form-control mb-3"
-             required
-             minlength="4"
-             #username=ngModel
-
-      >
-
-
-      <div *ngIf="username.invalid && (username.dirty || username.touched)"
-           class="alert">
-
+         ngModel name="username"
+         id="username"
+         placeholder="Enter your username"
+         class="form-control mb-3"
+         required minlength="4"
+         #username=ngModel>
+      <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert">
         <div class="alert alert-danger" role="alert" *ngIf="username.errors?.['required']">
           Name is required.
         </div>
         <div class="alert alert-danger" role="alert" *ngIf="username.errors?.['minlength']">
           Name must be at least 4 characters long.
         </div>
-
-
       </div>
-
-
-
-
-      <input type="password"
-             ngModel
-             name="password"
-             id="password"
+      <input type="password" 
+             ngModel name="password" 
+             id="password" 
              placeholder="Enter your password"
-             class="form-control mb-3"
-             required
-             #password=ngModel
-      >
-      <div *ngIf="password.invalid && (password.dirty || password.touched)"
-           class="alert">
+             class="form-control mb-3" 
+             required #password=ngModel>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert">
 
         <div class="alert alert-danger" role="alert" *ngIf="password.errors?.['required']">
           password is required.
         </div>
-
-
-
       </div>
-
-      <input type="submit"
-             value="Login"
-             class="btn btn-outline-primary form-control rounded-0">
-
+      <input type="submit" value="Login" class="btn btn-outline-primary form-control rounded-0">
     </form>
-      </div>
+  </div>
   <div class="text-center">
-
-    <p class=" m-4  "><a class="p-1 rounded link-info" routerLink="/SignUp" >sign up hear.</a></p>
+    <p class=" m-4  "><a class="p-1 rounded link-info" routerLink="/SignUp">sign up hear.</a></p>
   </div>
-
-  </div>
-
-
-
+</div>

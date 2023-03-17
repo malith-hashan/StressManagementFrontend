@@ -1,10 +1,8 @@
-
-
 <form [formGroup]="servey" (ngSubmit)="onSubmit(servey)">
   <label>userId</label>
-  <input formControlName="userId" type="text" name="userId" >
+  <input formControlName="userId" type="text" name="userId">
   <div *ngFor="let question of quections; let i = index">
-    <p  >{{ i + 1 }}. {{ question.quectionName }}</p>
+    <p>{{ i + 1 }}. {{ question.quectionName }}</p>
     <div>
       <label>
         <input type="radio" formControlName="{{i}}" value="1" name="question.answers"> answer1
@@ -21,8 +19,6 @@
       <label>
         <input type="radio" formControlName="{{i}}" value="5" name="question.answers"> answer5
       </label>
-
-
     </div>
   </div>
   <button type="submit">check</button>

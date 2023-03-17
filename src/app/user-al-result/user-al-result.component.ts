@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-al-result.component.css']
 })
 export class UserAlResultComponent {
-
 }

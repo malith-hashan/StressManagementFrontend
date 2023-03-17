@@ -42,11 +42,4 @@ ngOnInit():void {
   // onBackClick() {
   //   this.router.navigate(['Quections']);
   // }
-
-
-
-
-
-
-
 }

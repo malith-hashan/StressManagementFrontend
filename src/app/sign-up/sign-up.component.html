@@ -1,180 +1,50 @@
-<!--<div class="col-md-12">-->
-<!--  <div class="card card-container">-->
-<!--    <h1 style="text-align: center; padding-bottom: 20px;">Add User</h1>-->
-<!--    <img id="profile-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="profile-img-card" />-->
-<!--    <form [formGroup]="user">-->
-<!--      <div class="form-group">-->
-<!--        <label for="username">Username</label>-->
-<!--        <input type="text" id="username" name="username" class="form-control" formControlName="username" placeholder="Enter username">-->
-<!--        <div *ngIf="user.get('username').invalid && (user.get('username').dirty || user.get('username').touched)" class="alert alert-danger">-->
-<!--          <div *ngIf="user.get('username').errors.required">Username is required</div>-->
-<!--          <div *ngIf="user.get('username').errors.minlength">Username must be at least 3 characters long</div>-->
-<!--          <div *ngIf="user.get('username').errors.maxlength">Username cannot be more than 20 characters long</div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="form-group">-->
-<!--        <label >Password</label>-->
-<!--        <input type="password" class="form-control" formControlName="password" placeholder="Enter password">-->
-<!--        <div *ngIf="user.get('password').invalid && (user.get('password').dirty || user.get('password').touched)" class="alert alert-danger">-->
-<!--          <div *ngIf="user.get('password').errors.required">Password is required</div>-->
-<!--          <div *ngIf="user.get('password').errors.minlength">Password must be at least 6 characters long</div>-->
-<!--          <div *ngIf="user.get('password').errors.maxlength">Password cannot be more than 12 characters long</div>-->
-<!--          <div *ngIf="user.get('password').errors.pattern">Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character (@$!%*?&)</div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <label >Confirm Password</label>-->
-<!--      <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm password">-->
-<!--      <div *ngIf="user.get('confirmPassword').invalid && (user.get('confirmPassword').dirty || user.get('confirmPassword').touched)" class="alert alert-danger">-->
-<!--        <div *ngIf="user.get('confirmPassword').errors.required">Confirm password is required</div>-->
-<!--        <div *ngIf="user.get('confirmPassword').value !== user.get('password').value">Passwords do not match</div>-->
-<!--      </div>-->
-<!--      <div class="form-group">-->
-<!--        <label >Email</label>-->
-<!--        <input type="email" class="form-control" formControlName="email" placeholder="Enter email">-->
-<!--        <div *ngIf="user.get('email').invalid && (user.get('email').dirty || user.get('email').touched)" class="alert alert-danger">-->
-<!--          <div *ngIf="user.get('email').errors.required">Email is required</div>-->
-<!--          <div *ngIf="user.get('email').errors.pattern">Email must be in a valid format</div>-->
-<!--        </div>-->
-<!--      </div>-->
-
-
-<!--      <button-->
-
-<!--        type="button"-->
-<!--        class="btn btn-primary btn-lg"-->
-<!--        (click)="saveUser()">-->
-<!--        Save-->
-<!--      </button>-->
-<!--    </form>-->
-<!--  </div>-->
-
-<!--</div>-->
-
-
-
-
-
-
-
-  <!--<div class="container">-->
-<!--  <br>-->
-<!--  <span class="d-block p-2 text-bg-primary">-->
-<!--        <p class="text-center">SignUp as User</p>-->
-<!--    </span>-->
-<!--  <br>-->
-<!--  <form [formGroup]="signup">-->
-
-<!--    <div class="mb-3 row">-->
-<!--      <label  class="col-sm-2 col-form-label">Name</label>-->
-
-<!--      <div class="col-sm-10">-->
-<!--        <input type="text" class="form-control" id="username" formControlName="username">-->
-<!--        <div *ngIf="signup.controls['username'].invalid && signup.controls['username'].touched"-->
-<!--             class="text-danger">-->
-<!--          Name is required-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-
-
-<!--    <div class="mb-3 row">-->
-<!--      <label  class="col-sm-2 col-form-label">email</label>-->
-
-<!--      <div class="col-sm-10">-->
-<!--        <input type="text" class="form-control" id="email" formControlName="email">-->
-<!--        <div *ngIf="signup.controls['email'].invalid && signup.controls['email'].touched" class="text-danger">-->
-<!--          Address is required-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--    </div>-->
-
-
-<!--    <div class="mb-3 row">-->
-<!--      <label class="col-sm-2 col-form-label">Password</label>-->
-<!--      <div class="col-sm-10">-->
-<!--        <input type="password" class="form-control" id="password" formControlName="password">-->
-<!--        <div *ngIf="signup.controls['password'].invalid && signup.controls['password'].touched"-->
-<!--             class="text-danger">-->
-<!--          Password is required-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-
-<!--    <div class="d-grid gap-2 col-6 mx-auto">-->
-<!--      <button class="btn btn-primary" type="submit" (click)=" addUser()" [disabled]="signup.invalid">SignUp</button>-->
-
-<!--    </div>-->
-<!--  </form>-->
-<!--</div>-->
-
-
-
-
-
-
 <div class="shadow p-3 mb-5 bg-body-tertiary rounded mx-auto" style="margin: 1%; padding: 10%;width: 50%;">
   <div class="nav-header">
-
-
-    <header class="text-center text-white py-5" style="background-image:url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
+    <header class="text-center text-white py-5"
+      style="background-image:url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
       <div class="nav-brand">
         <img src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/bradlogo2.png">
       </div>
       <i class="fa fa-bars fa-3x"></i>
       <h1 class="display-5 font-weight-bold mb-4"><u>sign up</u></h1>
-
-    </header>    </div>
-
-
-
-
-
-
+    </header>
+  </div>
   <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
     <form [formGroup]="user">
 
       <div class="mb-3 row">
-        <label  class="col-sm-2 col-form-label">Name</label>
+        <label class="col-sm-2 col-form-label">Name</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="username" formControlName="username">
           <div *ngIf="user.controls['username'].invalid && user.controls['username'].touched" class="text-danger">
             <div *ngIf="user.get('username')?.errors?.['required']">Username is required</div>
             <div *ngIf="user.get('username')?.errors?.['minlength']">Username must be at least 3 characters long</div>
-            <div *ngIf="user.get('username')?.errors?.['maxlength']">Username cannot be more than 20 characters long</div>
-
-
+            <div *ngIf="user.get('username')?.errors?.['maxlength']">Username cannot be more than 20 characters long
+            </div>
           </div>
         </div>
       </div>
-
-
       <div class="mb-3 row">
-        <label  class="col-sm-2 col-form-label">email</label>
-
+        <label class="col-sm-2 col-form-label">email</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="email" formControlName="email">
           <div *ngIf="user.controls['email'].invalid && user.controls['email'].touched" class="text-danger">
             <div *ngIf="user.get('email')?.errors?.['required']">Email is required</div>
             <div *ngIf="user.get('email')?.errors?.['pattern']">Email must be in a valid format</div>
-
           </div>
         </div>
-
       </div>
-
 
       <div class="mb-3 row">
         <label class="col-sm-2 col-form-label">Password</label>
         <div class="col-sm-10">
           <input type="password" class="form-control" id="password" formControlName="password">
-          <div *ngIf="user.controls['password'].invalid && user.controls['password'].touched"
-               class="text-danger">
+          <div *ngIf="user.controls['password'].invalid && user.controls['password'].touched" class="text-danger">
             <div *ngIf="user.get('password')?.errors?.['required']">Password is required</div>
             <div *ngIf="user.get('password')?.errors?.['minlength']">Password must be at least 6 characters long</div>
             <div *ngIf="user.get('password')?.errors?.['maxlength']">Password cannot be more than 12 characters long</div>
-            <div *ngIf="user.get('password')?.errors?.['pattern']">Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character (@$!%*?&)</div>
-
+             <div *ngIf="user.get('password')?.errors?.['pattern']">Password must contain at least one lowercase letter,
+              one uppercase letter, one number, and one special character (@$!%*?&)</div>
           </div>
         </div>
       </div>
@@ -183,7 +53,9 @@
         <label class="col-sm-2 col-form-label">Confirm Password</label>
         <div class="col-sm-10">
           <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm password">
-          <div *ngIf="user.get('confirmPassword')?.invalid && (user.get('confirmPassword')?.dirty || user.get('confirmPassword')?.touched)" class="alert alert-danger">
+          <div
+            *ngIf="user.get('confirmPassword')?.invalid && (user.get('confirmPassword')?.dirty || user.get('confirmPassword')?.touched)"
+            class="alert alert-danger">
             <div *ngIf="user.get('confirmPassword')?.errors?.['required']">Confirm password is required</div>
             <div *ngIf="user.get('confirmPassword')?.value !== user.get('password')?.value">Passwords do not match</div>
           </div>
@@ -192,14 +64,7 @@
 
       <div class="d-grid gap-2 col-6 mx-auto">
         <button class="btn btn-primary" type="submit" (click)=" saveUser()" [disabled]="user.invalid">SignUp</button>
-
       </div>
     </form>
   </div>
-
-
 </div>
-
-
-
-

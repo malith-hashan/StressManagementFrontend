@@ -1,58 +1,46 @@
-<div
-  class="d-flex justify-content-md-center align-items-center vh-20  "
-  id="main"
->
+<div class="d-flex justify-content-md-center align-items-center vh-20  " id="main">
   <div class="container-fluid page">
-
-
     <div class="nav-header">
-
-
-      <header class="text-center text-white py-5" style="background-image:url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
+      <header class="text-center text-white py-5"
+        style="background-image:url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
         <div class="nav-brand">
-        <img src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/bradlogo2.png">
-      </div>
-      <i class="fa fa-bars fa-3x"></i>
+          <img src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/bradlogo2.png">
+        </div>
+        <i class="fa fa-bars fa-3x"></i>
         <h1 class="display-5 font-weight-bold mb-4"><u>user servey result</u></h1>
         <p class="lead mb-0">find your all time servey result from hear.check your progress..</p>
         <p class="font-italic">Check the user enterd servey acording to the date
-
         </p>
-      </header>    </div>
-
-<!--    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-
-    <div class="p-1"><h2><b>user name: {{username1}}</b></h2></div>
+      </header>
+    </div>
+    <div class="p-1">
+      <h2><b>user name: {{username1}}</b></h2>
+    </div>
     <div class="page__content shadow p-3 position-relative" id="main-container">
-      <form  #userForm="ngForm" >
-       <br>
-        <input readonly class="form-control"placeholder="enter user id hear.."#userEnterdValue [(ngModel)]="idNumber" type="number"  name="userId" id="userId"  >
+      <form #userForm="ngForm">
+        <br>
+        <input readonly class="form-control" placeholder="enter user id hear.." #userEnterdValue [(ngModel)]="idNumber"
+          type="number" name="userId" id="userId">
         <div class="d-grid gap-2">
-        <button type="button" class="btn btn-secondary btn-sm" name="submitButton" id="submitButton" (click)="getAllServeyByUserId((userEnterdValue.value))" >find</button>
+          <button type="button" class="btn btn-secondary btn-sm" name="submitButton" id="submitButton"
+            (click)="getAllServeyByUserId((userEnterdValue.value))">find</button>
         </div>
       </form>
       <br>
       <table class="table table-secondary table-striped">
         <thead>
-        <tr>
-          <th scope="col">servey Date</th>
-          <th scope="col">result </th>
-
-        </tr>
+          <tr>
+            <th scope="col">servey Date</th>
+            <th scope="col">result </th>
+          </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let servey of serveys">
-          <td>{{ servey.date|date}}</td>
-          <td>{{ servey.userResult }}</td>
-
-
-        </tr>
+          <tr *ngFor="let servey of serveys">
+            <td>{{ servey.date|date}}</td>
+            <td>{{ servey.userResult }}</td>
+          </tr>
         </tbody>
-
-
       </table>
-
-
     </div>
   </div>
 </div>

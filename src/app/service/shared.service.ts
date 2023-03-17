@@ -1,25 +1,24 @@
 import { Injectable } from '@angular/core';
-import {FormControl} from "@angular/forms";
+import { FormControl } from "@angular/forms";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedService {
-  userId:number=0
-  userName:string=""
+  userId: number = 0
+  userName: string = ""
   constructor() { }
 
-  setMethodID(data: number){
-    this.userId=data;
+  setMethodID(data: number) {
+    this.userId = data;
   }
-
-  getMethodID(){
+  getMethodID() {
     return this.userId
   }
-  setMethodName(data:string){
-    this.userName=data;
+  setMethodName(data: string) {
+    this.userName = data;
   }
-  getMethodName(){
+  getMethodName() {
     return this.userName
   }
 }

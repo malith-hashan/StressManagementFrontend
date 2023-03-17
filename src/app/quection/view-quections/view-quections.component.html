@@ -1,9 +1,7 @@
 <div class="container-fluid page">
-
   <div class="nav-header">
-
-
-    <header class="text-center text-white py-5" style="background-image:url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
+    <header class="text-center text-white py-5"
+      style="background-image:url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
       <div class="nav-brand">
         <img src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/bradlogo2.png">
       </div>
@@ -11,48 +9,32 @@
       <h1 class="display-5 font-weight-bold mb-4"><u>List of Quections</u></h1>
       <p class="lead mb-0">find all the quection that visible to the users servey.</p>
       <p class="font-italic">make changes if nessoory
-
       </p>
-    </header>    </div>
-
-
+    </header>
+  </div>
   <div class="page__content shadow p-3 position-relative" id="main-container">
-
-    <div class="p-3"> <button class="btn btn-warning" (click)="openDialog()" >add quections!</button></div>
-
+    <div class="p-3"> <button class="btn btn-warning" (click)="openDialog()">add quections!</button></div>
     <table class="table table-secondary table-striped">
       <thead>
-      <tr>
-        <th scope="col">quection number</th>
-        <th scope="col">quection name</th>
-        <th scope="col">date of release</th>
-        <th class="text-center" scope="col">Delete</th>
-
-      </tr>
+        <tr>
+          <th scope="col">quection number</th>
+          <th scope="col">quection name</th>
+          <th scope="col">date of release</th>
+          <th class="text-center" scope="col">Delete</th>
+        </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let quection of quections">
-        <td>{{ quection.quectionNo}}</td>
-        <td>{{ quection.quectionName }}</td>
-        <td>{{ quection.date|date }}</td>
-
-        <td class="text-center">
-          <button
-            type="button"
-            class="btn btn-danger"
-            (click)="DeleteQuection(quection.id)"
-          >
-            Delete
-          </button>
-        </td>
-
-      </tr>
+        <tr *ngFor="let quection of quections">
+          <td>{{ quection.quectionNo}}</td>
+          <td>{{ quection.quectionName }}</td>
+          <td>{{ quection.date|date }}</td>
+          <td class="text-center">
+            <button type="button" class="btn btn-danger" (click)="DeleteQuection(quection.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
       </tbody>
-
-
     </table>
-
-
   </div>
 </div>
-
