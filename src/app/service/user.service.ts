@@ -9,6 +9,7 @@ import { Observable } from "rxjs";
   providedIn: 'root'
 })
 export class UserService {
+
   PATH_OF_API = "http://localhost:8080/api/auth";
   requestHeader = new HttpHeaders({
     "No-Auth": "True"
