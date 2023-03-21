@@ -25,8 +25,7 @@
       </li>
     </ul>
     <button *ngIf="!isLogedin()" type="button" class="btn btn-outline-primary" routerLink="SignIn">SignIn</button>
-    <button *ngIf="isLogedin()" type="button" class="btn btn-outline-primary" routerLink="SignIn"
-      (click)="isLogout()">LogOUT</button>
+    <button *ngIf="isLogedin()" type="button" class="btn btn-outline-primary" routerLink="SignIn" (click)="isLogout()">LogOUT</button>
   </div>
 </nav>
 <router-outlet></router-outlet>

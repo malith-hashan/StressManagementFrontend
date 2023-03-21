@@ -9,6 +9,7 @@ import { IQuectionNew } from "../modules/quectionModle/quectionModleForServey";
 import { UserData } from "../modules/userEnterdServeyModle";
 import { IQuection } from "../modules/quectionModle/quectionModle";
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-servey', templateUrl: './servey.component.html', styleUrls: ['./servey.component.css']
@@ -26,7 +27,8 @@ export class ServeyComponent {
     private sharedService: SharedService,
     private userAuth: UserAuthService,
     private elRef: ElementRef,
-    private renderer: Renderer2) {
+    private renderer: Renderer2,
+    private router: Router) {
   }
 
   ngOnInit() {
@@ -73,6 +75,12 @@ export class ServeyComponent {
     const modal = this.elRef.nativeElement.querySelector('#myModal');
     this.renderer.addClass(modal, 'hide');
     this.renderer.setStyle(modal, 'display', 'none');
-    this.formModal.hide();
+    console.log("before hide console");
+    // this.formModal.hide();
+    this.router.navigate(['/UserServeyView']);
+    console.log("after hide console");
+
+
+
   }
 }
